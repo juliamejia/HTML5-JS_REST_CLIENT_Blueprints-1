@@ -142,7 +142,7 @@
 
 10. Verifique que la aplicación ahora, además de mostrar el listado de los planos de un autor, permita seleccionar uno de éstos y graficarlo. Para esto, haga que en las filas generadas para el punto 5 incluyan en la última columna un botón con su evento de clic asociado a la operación hecha anteriormente (enviándo como parámetro los nombres correspondientes).
 
-11. Verifique que la aplicación ahora permita: consultar los planos de un auto y graficar aquel que se seleccione.
+11. Verifique que la aplicación ahora permita: consultar los planos de un auto y graficar aquel que se seleccione.  
     <img width="524" alt="image" src="https://github.com/juliamejia/HTML5-JS_REST_CLIENT_Blueprints-1/assets/98657146/daf428b2-997b-4297-a3c7-40f02fd84946">   
     <img width="520" alt="image" src="https://github.com/juliamejia/HTML5-JS_REST_CLIENT_Blueprints-1/assets/98657146/0f372d9d-7c7f-4c97-a650-51e5f19501a2">  
 
