@@ -1,44 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<style>
-table, th, td {
-  border:1px solid black;
-}
-</style>
 
 <head>
     <title>Blueprints</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet"
-          href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    <!-- Enlace a Bootstrap CSS -->
+    <link rel="stylesheet" href="/webjars/bootstrap/3.3.7/css/bootstrap.min.css" />
+
+    <!-- Enlace a tu archivo CSS personalizado (si lo tienes) -->
+    <!-- <link rel="stylesheet" href="css/tu_estilo.css" /> -->
+
+    <!-- Enlace a jQuery -->
     <script src="/webjars/jquery/jquery.min.js"></script>
+
+    <!-- Enlace a Bootstrap JavaScript -->
     <script src="/webjars/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <!-- Enlace a tu archivo de JavaScript (app.js) -->
     <script src="js/apimock.js"></script>
     <script src="js/app.js"></script>
 
 </head>
+
 <body>
-<H1 style="margin-left:2rem">Prueba</H1>
-<label style="margin-left:2rem">Author</label>
-<input id = "AuthorInput"style = "margin-left:2rem" name="Author" type="text"></input>
-<button style = "margin-left:2rem" id="GetBlueprintsButton" onclick="Blueprint.actualizarPlanos()">GetbluePrints</button>
-<br><br><br>
-<label style = "margin-left:2rem">Author</label>
-<br><br><br>
-<table style = "width:30%;margin-left:2rem">
-    <tr>
+<!-- Encabezado con estilo Bootstrap -->
+<div class="container">
+    <div class="page-header">
+        <h1>Blueprints</h1>
+    </div>
+</div>
+
+<div class="container">
+    <!-- Formulario de autor -->
+    <div class="form-group">
+        <label for="AuthorInput">Author</label>
+        <input id="AuthorInput" class="form-control" name="Author" type="text" placeholder="Enter author name">
+    </div>
+    <button id="GetBlueprintsButton" class="btn btn-primary" onclick="Blueprint.actualizarPlanos()">Get Blueprints</button>
+</div>
+
+<div class="container">
+    <!-- Tabla de planos con estilos Bootstrap -->
+    <table class="table table-bordered">
         <thead>
-        <th text-align="center">BluePrint name</th>
-        <th text-align="center">Number of points</th>
-        <th text-align="center">Open</th>
-        <th></th>
+        <tr>
+            <th class="text-center">Blueprint name</th>
+            <th class="text-center">Number of points</th>
+            <th class="text-center">Open</th>
+        </tr>
         </thead>
-    </tr>
-</table>
-<br><br>
-<label style = "margin-left:2rem" id="blueprintsPointsLabel">Total user points</label><label style = "margin-left:2rem" id="totalPoints"></label>
-<br>
-<canvas id="myCanvas" width="300" height="300" style="margin-top:-15rem  ;margin-left:70rem; border:1px solid rgb(7, 0, 41);"></canvas>
+        <tbody></tbody>
+    </table>
+
+    <!-- Etiqueta de puntos totales con estilos Bootstrap -->
+    <div class="text-center">
+        <label id="blueprintsPointsLabel">Total user points</label>
+        <label id="totalPoints" class="label label-success"></label>
+    </div>
+</div>
+
+<!-- Lienzo para dibujar con estilos Bootstrap -->
+<div class="container text-center">
+    <canvas id="myCanvas" width="300" height="300" style="border: 1px solid #333;"></canvas>
+</div>
 </body>
+
 </html>

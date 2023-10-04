@@ -56,23 +56,18 @@ Blueprint = (function () {
      */
     function actualizarPlanos() {
         console.log($("#AuthorInput").val());
-
         // Llama a la función 'getBlueprintsByAuthor' del módulo 'apimock' o 'apiclient' según la implementación seleccionada.
         apimock.getBlueprintsByAuthor($("#AuthorInput").val(), fun);
-
         var bps = blueprints;
         console.log(bps);
-
         // Mapeo de planos y creación de objetos plano.
         var bps2 = bps.map(function (bp) {
             var plano = { nombre: bp.name, puntos: bp.points.length };
             return plano;
         });
         console.log(bps2);
-
         planoM = bps2;
         $("table tbody").empty();
-
         // Creación de tabla de planos en el documento HTML.
         var BlueprintTable = bps2.map(function (plano) {
             var columna = "<tr><td align=\"center\" id=\"" + plano.nombre + "_\">" + plano.nombre + "</td><td align=\"center\">" + plano.puntos + "</td><td><button onclick=\"Blueprint.dibujarPlano(" + plano.nombre + "_)\">Open</button></td></tr>";
